@@ -12,14 +12,14 @@ int main()
 
 	try
 	{
-        WorkTicket test, copyTest;
+        WorkTicket test;
         test.SetWorkTicket();
         string testString = test.ToString();
         cout << testString;
 
-        copyTest = test;
+        WorkTicket copyTest = test;
         testString = copyTest.ToString();
-        cout << testString;
+        cout << "Printing Ticket..." << endl << testString;
 	}
 	catch (exception& ex)
 	{

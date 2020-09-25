@@ -29,17 +29,19 @@ WorkTicket::~WorkTicket()
 //Copy Constructor
 WorkTicket::WorkTicket(const WorkTicket& ticketCopy)
 {
+	cout << "Copying Work Ticket...One Moment...\n";
 	myTicketNumber = ticketCopy.myTicketNumber;
 	myDate = ticketCopy.myDate;
 	myID = ticketCopy.myID;
 	myDescription = ticketCopy.myDescription;
+	cout << "Ticket Copied!\n";
 }
 
 /// <summary>
 /// Retrieves WorkTicket TicketNumber
 /// </summary>
 /// <returns></returns>
-int WorkTicket::GetTicketNumber()
+int WorkTicket::GetTicketNumber() const
 {
 	return myTicketNumber;
 }
@@ -48,7 +50,7 @@ int WorkTicket::GetTicketNumber()
 /// Retrieves WorkTicket Date
 /// </summary>
 /// <returns></returns>
-string WorkTicket::GetTicketDate()
+string WorkTicket::GetTicketDate() const
 {
 	return myDate;
 }
@@ -57,7 +59,7 @@ string WorkTicket::GetTicketDate()
 /// Retrieves WorkTicket Identification Number
 /// </summary>
 /// <returns></returns>
-string WorkTicket::GetID()
+string WorkTicket::GetID() const
 {
 	return myID;
 }
@@ -66,7 +68,7 @@ string WorkTicket::GetID()
 /// Retrieves WorkTicket Description
 /// </summary>
 /// <returns></returns>
-string WorkTicket::GetDescription()
+string WorkTicket::GetDescription() const
 {
 	return myDescription;
 }

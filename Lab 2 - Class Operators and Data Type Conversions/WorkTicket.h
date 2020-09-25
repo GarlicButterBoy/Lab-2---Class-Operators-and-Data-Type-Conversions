@@ -26,10 +26,10 @@ public:
 	WorkTicket(const WorkTicket& ticketCopy);
 
 	//Accessors (Getters): Queries the Object
-	int GetTicketNumber();
-	string GetTicketDate();
-	string GetID();
-	string GetDescription();
+	int GetTicketNumber() const;
+	string GetTicketDate() const;
+	string GetID() const;
+	string GetDescription() const;
 
 	//Mutators (Setters): Changes the Object
 	void SetTicketNumber();
