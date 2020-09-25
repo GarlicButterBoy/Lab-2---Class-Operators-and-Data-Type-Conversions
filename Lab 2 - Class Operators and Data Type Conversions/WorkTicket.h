@@ -27,6 +27,7 @@ public:
 
 	//Operator Overloads
 	bool operator==(const WorkTicket& tempTicket) const;
+	WorkTicket operator=(const WorkTicket& tempTicket);
 
 	//Accessors (Getters): Queries the Object
 	int GetTicketNumber() const;

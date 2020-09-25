@@ -46,6 +46,16 @@ bool WorkTicket::operator==(const WorkTicket& tempTicket) const
 		GetDescription() == tempTicket.GetDescription());
 }
 
+WorkTicket WorkTicket::operator=(const WorkTicket& tempTicket)
+{
+	myTicketNumber = tempTicket.myTicketNumber;
+	myDate = tempTicket.myDate;
+	myID = tempTicket.myID;
+	myDescription = tempTicket.myDescription;
+	cout << "New Ticket has been ASSIGNED\n";
+	return *this;
+}
+
 
 /// <summary>
 /// Retrieves WorkTicket TicketNumber
@@ -90,16 +100,15 @@ string WorkTicket::GetDescription() const
 void WorkTicket::SetTicketNumber()
 {
 	char valid[] = "0123456789";
-	char num_array[5];
-	string output;
+	char num_array[6];
 
-	for (int i = 0; i < 5; i++)
+	for (char& i : num_array)
 	{
-		num_array[i] = valid[rand() % 10];
+		i = valid[rand() % 10];
 	}
-	output = ArrayToString(num_array, 5);
+	const string output = ArrayToString(num_array, 6);
 
-	int ticketNumber = stoi(output);
+	const int ticketNumber = stoi(output);
 
 	myTicketNumber = ticketNumber;
 }

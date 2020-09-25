@@ -22,6 +22,11 @@ int main()
         cout << "Printing Ticket..." << endl << testString;
 
 		cout << "\nAre these tickets the same? 1 = Yes | 0 = No\n" << (test == copyTest);
+		WorkTicket newTicket = test;
+
+		testString = newTicket.ShowWorkTicket();
+
+		cout << "New Ticket is:" << testString;
 
 
 	}
