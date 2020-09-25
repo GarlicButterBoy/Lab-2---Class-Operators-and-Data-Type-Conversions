@@ -32,16 +32,18 @@ public:
 	string GetDescription();
 
 	//Mutators (Setters): Changes the Object
-	void SetTicketNumber(int ticketNumber);
-	void SetTicketDate(int day, int month, int year);
+	void SetTicketNumber();
+	void SetTicketDate();
 	void SetID();
-	void SetDescription(string description);
+	void SetDescription();
+	void SetWorkTicket();
 
 	//Methods (Functions)
+	static string DateToString(int day, int month, int year);
 	string ToString();
-	string ArrayToString(char* a, int size);
-	string GenerateClientID();
-	int GenerateTicketNumber();
+	static string ArrayToString(char* a, int size);
+	//string GenerateClientID();
+	//int GenerateTicketNumber();
 
 private:
 	//Data Members
