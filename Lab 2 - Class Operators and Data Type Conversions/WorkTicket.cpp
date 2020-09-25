@@ -37,6 +37,16 @@ WorkTicket::WorkTicket(const WorkTicket& ticketCopy)
 	cout << "Ticket Copied!\n";
 }
 
+bool WorkTicket::operator==(const WorkTicket& tempTicket) const
+{
+
+	return (GetTicketNumber() == tempTicket.GetTicketNumber() &&
+		GetTicketDate() == tempTicket.GetTicketDate() &&
+		GetID() == tempTicket.GetID() &&
+		GetDescription() == tempTicket.GetDescription());
+}
+
+
 /// <summary>
 /// Retrieves WorkTicket TicketNumber
 /// </summary>
@@ -180,7 +190,7 @@ string WorkTicket::DateToString(int day, int month, int year)
 }
 
 //Printing the final ticket
-string WorkTicket::ToString()
+string WorkTicket::ShowWorkTicket() const
 {
 
 	string outputStr;

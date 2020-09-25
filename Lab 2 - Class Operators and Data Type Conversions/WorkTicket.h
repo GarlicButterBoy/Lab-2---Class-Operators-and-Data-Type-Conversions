@@ -25,11 +25,15 @@ public:
 	//Copy Constructor
 	WorkTicket(const WorkTicket& ticketCopy);
 
+	//Operator Overloads
+	bool operator==(const WorkTicket& tempTicket) const;
+
 	//Accessors (Getters): Queries the Object
 	int GetTicketNumber() const;
 	string GetTicketDate() const;
 	string GetID() const;
 	string GetDescription() const;
+	string GetWorkTicket(WorkTicket tempTicket);
 
 	//Mutators (Setters): Changes the Object
 	void SetTicketNumber();
@@ -40,7 +44,7 @@ public:
 
 	//Methods (Functions)
 	static string DateToString(int day, int month, int year);
-	string ToString();
+	string ShowWorkTicket() const;
 	static string ArrayToString(char* a, int size);
 	//string GenerateClientID();
 	//int GenerateTicketNumber();
