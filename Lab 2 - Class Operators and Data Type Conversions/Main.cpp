@@ -9,10 +9,23 @@
 
 int main()
 {
-    WorkTicket test;
-    test.SetWorkTicket();
-    const string testString = test.ToString();
-	cout << testString;
+
+	try
+	{
+        WorkTicket test, copyTest;
+        test.SetWorkTicket();
+        string testString = test.ToString();
+        cout << testString;
+
+        copyTest = test;
+        testString = copyTest.ToString();
+        cout << testString;
+	}
+	catch (exception& ex)
+	{
+		cerr << ex.what() << " Ending the program.";
+	}
+
 }
 
 

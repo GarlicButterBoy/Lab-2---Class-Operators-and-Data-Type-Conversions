@@ -29,7 +29,10 @@ WorkTicket::~WorkTicket()
 //Copy Constructor
 WorkTicket::WorkTicket(const WorkTicket& ticketCopy)
 {
-
+	myTicketNumber = ticketCopy.myTicketNumber;
+	myDate = ticketCopy.myDate;
+	myID = ticketCopy.myID;
+	myDescription = ticketCopy.myDescription;
 }
 
 /// <summary>
@@ -147,6 +150,9 @@ void WorkTicket::SetDescription()
 	myDescription = description;
 }
 
+/// <summary>
+/// SetWorkTicket
+/// </summary>
 void WorkTicket::SetWorkTicket()
 {
 	SetTicketNumber();

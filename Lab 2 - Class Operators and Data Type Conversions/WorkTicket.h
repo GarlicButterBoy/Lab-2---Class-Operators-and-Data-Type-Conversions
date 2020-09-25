@@ -47,7 +47,7 @@ public:
 
 private:
 	//Data Members
-	int myTicketNumber;
+	int myTicketNumber{};
 	string myDate;
 	string myID;
 	string myDescription;
