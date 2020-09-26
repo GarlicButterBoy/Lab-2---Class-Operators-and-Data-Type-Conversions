@@ -1,7 +1,7 @@
 /*
  * @FileName: MyConsoleInput.h
- * @Author  : Nick Sturch-Flint (100303769) and Rose Nguyen (100764192)
- * @Date    : September 20, 2020
+ * @Author  : Nick Sturch-Flint (100303769)
+ * @Date    : September 26, 2020
  *
  */
 

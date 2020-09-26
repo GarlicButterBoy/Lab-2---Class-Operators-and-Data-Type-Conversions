@@ -1,7 +1,7 @@
 /*
  * @FileName: WorkTicket.cpp
- * @Author  : Nick Sturch-Flint (100303769) and Rose Nguyen (100764192)
- * @Date    : September 20, 2020
+ * @Author  : Nick Sturch-Flint (100303769) 
+ * @Date    : September 26, 2020
  *
  */
 
@@ -37,6 +37,18 @@ WorkTicket::WorkTicket(const WorkTicket& ticketCopy)
 	cout << "Ticket Copied!\n";
 }
 
+WorkTicket::operator string() const
+{
+	string ticket = "Work Ticket #" + std::to_string(this->GetTicketNumber()) + " -- " + this->GetID() + " (" + this->GetTicketDate() + ") : " + this->GetDescription();
+	return ticket;
+}
+
+
+/// <summary>
+/// Equality Operator Overload
+/// </summary>
+/// <param name="tempTicket"></param>
+/// <returns></returns>
 bool WorkTicket::operator==(const WorkTicket& tempTicket) const
 {
 
@@ -46,6 +58,11 @@ bool WorkTicket::operator==(const WorkTicket& tempTicket) const
 		GetDescription() == tempTicket.GetDescription());
 }
 
+/// <summary>
+/// Assignment Operator Overload
+/// </summary>
+/// <param name="tempTicket"></param>
+/// <returns></returns>
 WorkTicket WorkTicket::operator=(const WorkTicket& tempTicket)
 {
 	myTicketNumber = tempTicket.myTicketNumber;
@@ -56,6 +73,31 @@ WorkTicket WorkTicket::operator=(const WorkTicket& tempTicket)
 	return *this;
 }
 
+/// <summary>
+/// Friend : Outstream Overload
+/// </summary>
+/// <param name="out"></param>
+/// <param name="ticket"></param>
+/// <returns></returns>
+//ostream& operator<<(ostream& out, const WorkTicket& ticket)
+//{
+//	out << ticket.ShowWorkTicket();
+//	return out;
+//}
+
+
+/// <summary>
+/// Friend: istream Overload
+/// </summary>
+/// <param name="out"></param>
+/// <param name="ticket"></param>
+/// <returns></returns>
+//istream& operator>>(istream& in, WorkTicket& ticket)
+//{
+////	in >> ticket.SetTicketNumber();
+//	in.ignore();
+//	return in;
+//}
 
 /// <summary>
 /// Retrieves WorkTicket TicketNumber
@@ -223,3 +265,5 @@ string WorkTicket::ArrayToString(char* a, int size)
 	}
 	return temp;
 }
+
+

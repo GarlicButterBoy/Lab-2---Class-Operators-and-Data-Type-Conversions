@@ -1,5 +1,9 @@
-// Lab 2 - Class Operators and Data Type Conversions.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+ * @FileName: Main.cpp
+ * @Author  : Nick Sturch-Flint (100303769)
+ * @Date    : September 26, 2020
+ *
+ */
 
 #include <ctime>
 #include <iostream>
@@ -28,7 +32,7 @@ int main()
 
 		cout << "New Ticket is:" << testString;
 
-
+		cout << test.operator string();
 	}
 	catch (exception& ex)
 	{

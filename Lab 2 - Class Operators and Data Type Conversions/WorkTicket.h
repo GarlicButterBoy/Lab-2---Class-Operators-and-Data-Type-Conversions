@@ -1,7 +1,7 @@
 /*
  * @FileName: WorkTicket.h
- * @Author  : Nick Sturch-Flint (100303769) and Rose Nguyen (100764192)
- * @Date    : September 20, 2020
+ * @Author  : Nick Sturch-Flint (100303769)
+ * @Date    : September 26, 2020
  *
  */
 
@@ -25,9 +25,16 @@ public:
 	//Copy Constructor
 	WorkTicket(const WorkTicket& ticketCopy);
 
+	//Conversion Operator
+	operator string() const;
+
 	//Operator Overloads
 	bool operator==(const WorkTicket& tempTicket) const;
 	WorkTicket operator=(const WorkTicket& tempTicket);
+
+	//Friend Overloads
+	//friend ostream& operator<<(ostream& out, const WorkTicket& ticket);
+	//friend istream& operator>>(istream& in, WorkTicket& ticket);
 
 	//Accessors (Getters): Queries the Object
 	int GetTicketNumber() const;
