@@ -16,7 +16,27 @@ int main()
 
 	try
 	{
-        WorkTicket test;
+		WorkTicket firstTicket, secondTicket;
+
+		cout << firstTicket.operator string() << endl;
+
+		firstTicket.SetWorkTicket();
+
+		cout << "\nAre these tickets the same? 1 = Yes | 0 = No\n" << (firstTicket == secondTicket);
+
+		if (!(firstTicket == secondTicket))
+		{
+			cout << "These tickets are not the same, changing now...";
+			secondTicket = firstTicket;
+		}
+		else
+		{
+			cout << "These tickets are the same";
+		}
+
+		cout << secondTicket;
+
+		/* WorkTicket test;
         test.SetWorkTicket();
         string testString = test.ShowWorkTicket();
         cout << testString;
@@ -32,7 +52,7 @@ int main()
 
 		cout << "New Ticket is:" << testString;
 
-		cout << test.operator string();
+		cout << test.operator string();*/
 	}
 	catch (exception& ex)
 	{

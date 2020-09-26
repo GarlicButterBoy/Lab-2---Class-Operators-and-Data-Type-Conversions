@@ -1,6 +1,6 @@
 /*
  * @FileName: WorkTicket.cpp
- * @Author  : Nick Sturch-Flint (100303769) 
+ * @Author  : Nick Sturch-Flint (100303769)
  * @Date    : September 26, 2020
  *
  */
@@ -79,11 +79,11 @@ WorkTicket WorkTicket::operator=(const WorkTicket& tempTicket)
 /// <param name="out"></param>
 /// <param name="ticket"></param>
 /// <returns></returns>
-//ostream& operator<<(ostream& out, const WorkTicket& ticket)
-//{
-//	out << ticket.ShowWorkTicket();
-//	return out;
-//}
+ostream& operator<<(ostream& out, const WorkTicket& ticket)
+{
+	out << ticket.ShowWorkTicket();
+	return out;
+}
 
 
 /// <summary>

@@ -33,7 +33,7 @@ public:
 	WorkTicket operator=(const WorkTicket& tempTicket);
 
 	//Friend Overloads
-	//friend ostream& operator<<(ostream& out, const WorkTicket& ticket);
+	friend ostream& operator<<(ostream& out, const WorkTicket& ticket);
 	//friend istream& operator>>(istream& in, WorkTicket& ticket);
 
 	//Accessors (Getters): Queries the Object
