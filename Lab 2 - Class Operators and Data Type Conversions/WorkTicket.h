@@ -34,7 +34,7 @@ public:
 
 	//Friend Overloads
 	friend ostream& operator<<(ostream& out, const WorkTicket& ticket);
-	//friend istream& operator>>(istream& in, WorkTicket& ticket);
+	friend istream& operator>>(istream& in, WorkTicket& ticket);
 
 	//Accessors (Getters): Queries the Object
 	int GetTicketNumber() const;

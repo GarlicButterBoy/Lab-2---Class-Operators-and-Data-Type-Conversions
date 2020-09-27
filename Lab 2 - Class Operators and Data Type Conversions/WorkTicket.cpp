@@ -92,12 +92,27 @@ ostream& operator<<(ostream& out, const WorkTicket& ticket)
 /// <param name="out"></param>
 /// <param name="ticket"></param>
 /// <returns></returns>
-//istream& operator>>(istream& in, WorkTicket& ticket)
-//{
-////	in >> ticket.SetTicketNumber();
-//	in.ignore();
-//	return in;
-//}
+istream& operator>>(istream& in, WorkTicket& ticket)
+{
+	int ticketNum, day, month, year;
+	cout << "Please type in a ticket number, must be a whole number: ";
+	in >> ticketNum;
+	ticket.myTicketNumber = ticketNum;
+
+	cout << "What day is it?" << endl;
+	day = ConsoleInput::ReadInteger(1, 31);
+	cout << "What month is it?" << endl;
+	month = ConsoleInput::ReadInteger(1, 12);
+	cout << "What year is it?" << endl;
+	year = ConsoleInput::ReadInteger(2000, 2099);
+	ticket.myDate = WorkTicket::DateToString(day, month, year);
+
+	cout << "Your client ID has been auto generated." << endl;
+	ticket.SetID();
+	cout << endl << "What is the reason for submitting a ticket?";
+	getline(in, ticket.myDescription);
+	return in;
+}
 
 /// <summary>
 /// Retrieves WorkTicket TicketNumber

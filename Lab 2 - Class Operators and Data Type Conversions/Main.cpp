@@ -16,12 +16,22 @@ int main()
 
 	try
 	{
+		//declaring two new worktickets
 		WorkTicket firstTicket, secondTicket;
 
+		//Printing the default ticket to the console with an overloaded operator
 		cout << firstTicket.operator string() << endl;
 
-		firstTicket.SetWorkTicket();
+		//using the class Setters
+		//firstTicket.SetWorkTicket();
 
+		//using the overloaded >> operator
+		cin >> secondTicket;
+
+		//Printing the non-default ticket to the console with an overloaded operator
+		cout << secondTicket.operator string() << endl;
+
+		//Comparing the tickets, 1 if they are the same, 0 if they are not
 		cout << "\nAre these tickets the same? 1 = Yes | 0 = No\n" << (firstTicket == secondTicket);
 
 		if (!(firstTicket == secondTicket))
@@ -31,28 +41,13 @@ int main()
 		}
 		else
 		{
-			cout << "These tickets are the same";
+			cout << "These tickets are the same. Printing both now..";
 		}
 
-		cout << secondTicket;
+		//Printing the first ticket
+		cout << "First Ticket: " << endl << firstTicket << endl;
+		cout << "Second Ticket: " << endl << secondTicket;
 
-		/* WorkTicket test;
-        test.SetWorkTicket();
-        string testString = test.ShowWorkTicket();
-        cout << testString;
-
-        WorkTicket copyTest = test;
-        testString = copyTest.ShowWorkTicket();
-        cout << "Printing Ticket..." << endl << testString;
-
-		cout << "\nAre these tickets the same? 1 = Yes | 0 = No\n" << (test == copyTest);
-		WorkTicket newTicket = test;
-
-		testString = newTicket.ShowWorkTicket();
-
-		cout << "New Ticket is:" << testString;
-
-		cout << test.operator string();*/
 	}
 	catch (exception& ex)
 	{
