@@ -37,7 +37,7 @@ int main()
 		if (!(firstTicket == secondTicket))
 		{
 			cout << "These tickets are not the same, changing now...";
-			secondTicket = firstTicket;
+			firstTicket = secondTicket;
 		}
 		else
 		{
