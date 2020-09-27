@@ -37,12 +37,12 @@ WorkTicket::WorkTicket(const WorkTicket& ticketCopy)
 	cout << "Ticket Copied!\n";
 }
 
+//Conversion Operator
 WorkTicket::operator string() const
 {
 	string ticket = "Work Ticket #" + std::to_string(this->GetTicketNumber()) + " -- " + this->GetID() + " (" + this->GetTicketDate() + ") : " + this->GetDescription();
 	return ticket;
 }
-
 
 /// <summary>
 /// Equality Operator Overload
@@ -271,6 +271,12 @@ string WorkTicket::ShowWorkTicket() const
 
 }
 
+/// <summary>
+///Turns an array of WorkTickets into a string
+/// </summary>
+/// <param name="a"></param>
+/// <param name="size"></param>
+/// <returns></returns>
 string WorkTicket::ArrayToString(char* a, int size)
 {
 	string temp;

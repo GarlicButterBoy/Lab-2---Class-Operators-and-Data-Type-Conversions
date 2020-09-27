@@ -20,7 +20,7 @@ int main()
 		WorkTicket firstTicket, secondTicket;
 
 		//Printing the default ticket to the console with an overloaded operator
-		cout << firstTicket.operator string() << endl;
+		cout << endl << firstTicket.operator string() << endl;
 
 		//using the class Setters
 		//firstTicket.SetWorkTicket();
