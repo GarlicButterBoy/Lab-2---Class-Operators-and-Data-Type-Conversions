@@ -34,7 +34,7 @@ WorkTicket::WorkTicket(const WorkTicket& ticketCopy)
 	myDate = ticketCopy.myDate;
 	myID = ticketCopy.myID;
 	myDescription = ticketCopy.myDescription;
-	cout << "Ticket Copied!\n";
+	cout << "Ticket Copied!\n\n";
 }
 
 //Conversion Operator
